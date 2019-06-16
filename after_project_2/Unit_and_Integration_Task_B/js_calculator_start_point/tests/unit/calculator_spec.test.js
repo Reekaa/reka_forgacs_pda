@@ -37,11 +37,13 @@ describe('calculator', function () {
   })
 
   test('should be able to chain multiple operations together', function(){
-    calculator.numberClick(14);
+    calculator.numberClick(1);
+    calculator.numberClick(4);
     calculator.operatorClick('-');
     calculator.numberClick(6);
     calculator.operatorClick('+');
-    calculator.numberClick(10);
+    calculator.numberClick(1);
+    calculator.numberClick(0);
     calculator.operatorClick('=');
     expect(calculator.runningTotal).toBe(18);
   })
@@ -53,7 +55,8 @@ describe('calculator', function () {
     calculator.operatorClick('+');
     calculator.numberClick(4);
     calculator.operatorClick('+');
-    calculator.numberClick(12);
+    calculator.numberClick(1);
+    calculator.numberClick(2);
     calculator.clearClick()
     calculator.numberClick(7);
     calculator.operatorClick('=');
